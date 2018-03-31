@@ -1,0 +1,121 @@
+.register {
+    position: relative;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 1.5%;
+    width: 30%;
+    height: 20%;
+    border-radius: 5%;
+    box-shadow: 0 0 200px rgba(white, .5), 0 1px 2px rgba(black, .3);
+
+    @media (max-width: 600px) {
+        width: 90%;
+        height: 30%;
+    }
+
+    @media (min-width: 501px) and (max-width: 1000px) {
+        width: 60%;
+        height: 20%;
+    }
+
+    h1 {
+        padding-bottom: 7px;
+        margin: -20px -20px 21px;
+        text-align: center;
+        border-bottom: 2px solid #c9c9c9;
+        box-shadow: 20px 20px 20 #000000;
+
+        @media (max-width: 766px) {
+            margin: 0 auto;
+        }
+    }
+
+    form {
+        margin: 17%;
+
+    @media (max-width: 489px) {
+        margin: 24% 3% auto;
+    }
+
+        input.nme_usr {
+            height: 30px;
+            width: 250px;
+            font-size:17px;
+            background: rgb(255, 246, 76);
+            border-radius: 5px;
+            border-color: white;
+
+            :focus {
+                outline: none;
+            }
+        }
+
+        input.eml_usr {
+            margin-top: 20px;
+            height: 30px;
+            width: 250px;
+            font-size: 17px;
+            background: rgb(255, 249, 76);
+            border-radius: 5px;
+            border-color: white;
+
+            :focus {
+                outline: 0;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+
+        input.nck_usr {
+            margin-top: 20px;
+            height: 30px;
+            width: 250px;
+            font-size: 17px;
+            background: rgb(255, 249, 76);
+            border-radius: 5px;
+            border-color: white;
+
+            :focus {
+                outline: 0;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+
+        input.pwd_usr {
+            margin-top: 20px;
+            height: 30px;
+            width: 250px;
+            font-size: 17px;
+            background: rgb(255, 249, 76);
+            border-radius: 5px;
+            border-color: white;
+
+            :focus {
+                outline: 0;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        input.btn {
+            margin: 30px 30px;
+            width: 200px;
+            height: 50px;
+            background: white;
+            border-color: #fff344;
+            border-radius: 5px;
+
+            :focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+
