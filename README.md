@@ -1,3 +1,6 @@
+# Just to show me da wae to the repository mah bruder
+click click click click
+
 # Projetodev
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
