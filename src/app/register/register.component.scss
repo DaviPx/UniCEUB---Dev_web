@@ -1,7 +1,7 @@
 .register {
     position: relative;
     margin: 0 auto;
-    background: #FFFFFF;
+    background-image: url(background.jpg);
     padding: 1.5%;
     width: 30%;
     height: 20%;
@@ -50,43 +50,7 @@
             }
         }
 
-        input.eml_usr {
-            margin-top: 20px;
-            height: 30px;
-            width: 250px;
-            font-size: 17px;
-            background: rgb(255, 249, 76);
-            border-radius: 5px;
-            border-color: white;
-
-            :focus {
-                outline: 0;
-                -webkit-box-shadow: none !important;
-                -moz-box-shadow: none !important;
-                box-shadow: none !important;
-            }
-        }
-
-
-        input.nck_usr {
-            margin-top: 20px;
-            height: 30px;
-            width: 250px;
-            font-size: 17px;
-            background: rgb(255, 249, 76);
-            border-radius: 5px;
-            border-color: white;
-
-            :focus {
-                outline: 0;
-                -webkit-box-shadow: none !important;
-                -moz-box-shadow: none !important;
-                box-shadow: none !important;
-            }
-        }
-
-
-        input.pwd_usr {
+        input.nme_usr {
             margin-top: 20px;
             height: 30px;
             width: 250px;
