@@ -1,7 +1,7 @@
-.login {
+.register {
     position: relative;
     margin: 0 auto;
-    background-image:url("background.jpg");
+    background-image: url(background.jpg);
     padding: 1.5%;
     width: 30%;
     height: 20%;
@@ -17,7 +17,6 @@
         width: 60%;
         height: 20%;
     }
-
 
     h1 {
         padding-bottom: 7px;
@@ -38,7 +37,7 @@
         margin: 24% 3% auto;
     }
 
-        input.usr_login {
+        input.nme_usr {
             height: 30px;
             width: 250px;
             font-size:17px;
@@ -51,7 +50,7 @@
             }
         }
 
-        input.pwd_login {
+        input.nme_usr {
             margin-top: 20px;
             height: 30px;
             width: 250px;
