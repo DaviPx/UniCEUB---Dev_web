@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JOGOS } from './mock_lista_jogos';
+import { JOGOS } from './mock_jogos';
 import { Jogo } from './jogo';
 
 @Component({
