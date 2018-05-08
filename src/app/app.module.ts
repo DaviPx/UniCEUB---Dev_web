@@ -13,15 +13,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NegociacoesComponent } from './negociacoes/negociacoes.component';
 import { JogosComponent } from './jogos/jogos.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const appRoutes: Routes = [
+  { path: '', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'menu', component: DashboardComponent },
   { path: 'negociacoes', component: NegociacoesComponent },
   { path: 'jogos', component: JogosComponent },
-  { path: 'usuarios', component: UsuariosComponent },
 ]
 
 @NgModule({
@@ -35,7 +33,6 @@ const appRoutes: Routes = [
     NavbarComponent,
     NegociacoesComponent,
     JogosComponent,
-    UsuariosComponent,
   ],
   imports: [
     BrowserModule,

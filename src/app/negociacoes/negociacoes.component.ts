@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Negociacao } from './negociacao';
+import { Troca } from './troca';
 
 @Component({
   selector: 'app-negociacoes',
