@@ -5,7 +5,7 @@ export const JOGOS: Jogo[]= [
     id:1,
     nome:'Bom de Guerra',
     votacao: 5,
-    photo:'godofwar.png',
+    photo:'capaJogo22.jpg',
     preco_varejo: 200,
     preco_medio: 90
   },
@@ -13,7 +13,7 @@ export const JOGOS: Jogo[]= [
     id:2,
     nome:'Field de Batalha 1',
     votacao: 4,
-    photo:'battlefield1.png',
+    photo:'capaJogo12.jpg',
     preco_varejo:300,
     preco_medio:150
   }

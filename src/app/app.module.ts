@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NegociacoesComponent } from './negociacoes/negociacoes.component';
 import { JogosComponent } from './jogos/jogos.component';
 
+import { JogoService } from './jogos/jogo.service';
+
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
@@ -42,7 +44,7 @@ const appRoutes: Routes = [
       { enableTracing: true }
     )
   ],
-  providers: [],
+  providers: [JogoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

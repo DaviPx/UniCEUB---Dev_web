@@ -15,12 +15,11 @@ export class JogosComponent implements OnInit {
   constructor(private jogoService: JogoService) { }
 
   ngOnInit() {
-  this.getJogos();
+    this.getJogos();
   }
 
+  getJogos(): void {
+    this.jogos = this.jogoService.getJogos();
+  }
 
-getJogos(): void {
-this.jogos = this.jogoService.getJogos();	
-
-}
 }

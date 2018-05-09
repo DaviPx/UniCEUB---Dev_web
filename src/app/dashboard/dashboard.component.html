@@ -1,29 +1,37 @@
 <app-navbar>
 </app-navbar>
 <form>
+  <div class="negociacoes">
+    <h1>Negociações em andamento</h1>
 
- <div class = 'negociacoes'> 
-<li *ngFor="let jogo of jogos">
- <img src = "assets/{{jogo.photo}}"/>
- <span class="badge2">{{jogo.id}}</span>
- <span class="badge1">{{jogo.nome}}</span>
-      
+    <div class="meusJogos">
+      <img src="assets/capaJogo12.jpg" alt="JogoTenho" height="100%" width="100">
+    </div>
 
-</li>
-</div>
+     <img src="assets/setaDupla.jpg" alt="IconeTipo" height="70" width="70" style="margin:10% 12%">
 
-<input class="btn" type="submit" value="Ver negociações" routerLink = "../negociacoes">
+    <div class="jogosDele">
+      <img src="assets/capaJogo22.jpg" alt="JogoQuero" height="100%" width="100">
+    </div>
+    <input class="btn" type="submit" value="Ver negociações" routerLink = "/negociacoes">
+
+  </div>
 </form>
 
 
 <form action="jogo">
 
   <div class="favoritos">
-    <h1>Jogos Favoritos</h1>
-    <img src="assets/gow.png" alt="JogoTenho" height="45" width="45">
-    <img src="assets/setaDupla.jpg" alt="IconeTipo" height="45" width="45">
-    <img src="favicon.ico" alt="JogoQuero" height="45" width="45">
-    <input class="btn" type="submit" value="Mais informações">
+    <h1>Jogos mais populares</h1>
+    <div *ngFor="let jogo of jogos">
+      <br>
+      <div class="row">
+        <img src="assets/{{jogo.photo}}" alt="JogoTenho" height="45" width="45">
+        <span>{{ jogo.nome }}</span>
+        <input class="btn " value="Ver mais" type="submit" routerLink="/jogos/{{jogo.id}}">
+      </div>
+    </div>
+    <input class="btn" type="submit" value="Mais informações" routerLink="/jogos">
   </div>
 
 </form>
