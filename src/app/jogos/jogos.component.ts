@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { JOGOS } from './mock_jogos';
+import { JogoService } from './jogo.service';
 import { Jogo } from './jogo';
+
 
 @Component({
   selector: 'app-jogos',
@@ -9,11 +10,17 @@ import { Jogo } from './jogo';
 })
 export class JogosComponent implements OnInit {
 
-  jogos = JOGOS;
+  jogos: Jogo[];
 
-  constructor() { }
+  constructor(private jogoService: JogoService) { }
 
   ngOnInit() {
+  this.getJogos();
   }
 
+
+getJogos(): void {
+this.jogos = this.jogoService.getJogos();	
+
+}
 }

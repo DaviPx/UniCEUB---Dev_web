@@ -1,23 +1,20 @@
 <app-navbar>
 </app-navbar>
+<form>
 
-<form action="negociacoes">
-  <div class="negociacoes">
-    <h1>Negociações em andamento</h1>
+ <div class = 'negociacoes'> 
+<li *ngFor="let jogo of jogos">
+ <img src = "assets/{{jogo.photo}}"/>
+ <span class="badge2">{{jogo.id}}</span>
+ <span class="badge1">{{jogo.nome}}</span>
+      
 
-    <div class="meusJogos">
-      <img src="assets/capaJogo1.jpg" alt="JogoTenho" height="100%" width="100">
-    </div>
+</li>
+</div>
 
-     <img src="assets/setaDupla.jpg" alt="IconeTipo" height="70" width="70" style="margin:10% 12%">
-
-    <div class="jogosDele">
-      <img src="assets/capaJogo2.jpg" alt="JogoQuero" height="100%" width="100">
-    </div>
-    <input class="btn" type="submit" value="Ver negociações" routerLink = "../negociacoes">
-
-  </div>
+<input class="btn" type="submit" value="Ver negociações" routerLink = "../negociacoes">
 </form>
+
 
 <form action="jogo">
 
