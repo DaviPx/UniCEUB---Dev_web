@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getJogos(): void {
-    this.jogos = this.jogoService.getJogos();
+    this.jogos = this.jogoService.getJogos().slice(0, 3);
   }
 
 }

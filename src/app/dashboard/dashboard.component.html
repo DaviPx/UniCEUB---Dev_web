@@ -13,7 +13,7 @@
     <div class="jogosDele">
       <img src="assets/capaJogo22.jpg" alt="JogoQuero" height="100%" width="100">
     </div>
-    <input class="btn" type="submit" value="Ver negociações" routerLink = "/negociacoes">
+    <input class="btn btn-info" type="submit" value="Ver negociações" routerLink = "/negociacoes">
 
   </div>
 </form>
@@ -26,12 +26,19 @@
     <div *ngFor="let jogo of jogos">
       <br>
       <div class="row">
-        <img src="assets/{{jogo.photo}}" alt="JogoTenho" height="45" width="45">
-        <span>{{ jogo.nome }}</span>
-        <input class="btn " value="Ver mais" type="submit" routerLink="/jogos/{{jogo.id}}">
+        <div class="col">
+          <img src="assets/{{jogo.photo}}" alt="JogoTenho" height="45" width="45">
+        </div>
+        <div class="col">
+          <span>{{ jogo.nome }}</span>
+          <span>{{ jogo.plataforma }}</span>
+        </div>
+        <div class="col">
+          <input class="btn btn-jogo" value="Ver mais" type="submit" routerLink="/jogos/{{jogo.id}}">
+        </div>
       </div>
     </div>
-    <input class="btn" type="submit" value="Mais informações" routerLink="/jogos">
+    <input class="btn btn-info" type="submit" value="Mais informações" routerLink="/jogos">
   </div>
 
 </form>

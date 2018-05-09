@@ -1,6 +1,4 @@
-
 .negociacoes {
-
     float:left;
     margin: 70px 100px;
     background: #FFFFFF;
@@ -21,6 +19,7 @@
     }
 
 }
+
 .favoritos {
 
     float:right;
@@ -44,57 +43,45 @@
 
 }
 
+h1 {
+    padding-bottom: 7px;
+    margin: -20px -20px 21px;
+    text-align: center;
+    border-bottom: 2px solid #c9c9c9;
+    box-shadow: 20px 20px 20 #000000;
 
-
-    h1 {
-        padding-bottom: 7px;
-        margin: -20px -20px 21px;
-        text-align: center;
-        border-bottom: 2px solid #c9c9c9;
-        box-shadow: 20px 20px 20 #000000;
-
-        @media (max-width: 766px) {
-            margin: 0 auto;
-        }
+    @media (max-width: 766px) {
+        margin: 0 auto;
     }
+}
 
-    form {
-
-
+form {
     @media (max-width: 489px) {
         margin: 24% 3% auto;
     }
+}
+
 .meusJogos{
    margin-left: -5%;
    float: left;
-     border: 5px solid blue;
-     width: 30%;
-
-
-
+    border: 5px solid blue;
+    width: 30%;
 }
+
 .jogosDele{
-margin-right: -5%;
+    margin-right: 0%;
     float:right;
     width: 30%;
     border: 5px solid red;
-
 }
 
-
-        input.btn {
-            margin: 30px 20%;
-            width: 200px;
-            height: 70px;
-            background: #007fff;
-            border-color: #007fff;
-            border-radius: 5px;
-            color: white;
-            margin-bottom: -5%;
-
-
-        }
-    }
-
-
-
+input.btn-info {
+    margin: 30px 20%;
+    width: 200px;
+    height: 70px;
+    background: #007fff;
+    border-color: #007fff;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: -5%;
+}
