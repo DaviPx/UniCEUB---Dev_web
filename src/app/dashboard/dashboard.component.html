@@ -4,15 +4,17 @@
   <div class="negociacoes">
     <h1>Negociações em andamento</h1>
 
-    <div class="meusJogos">
-      <img src="assets/capaJogo12.jpg" alt="JogoTenho" height="100%" width="100">
+    <div *ngFor="let troca of trocas">
+      <br>
+      <div class="meusJogos">
+        <img src="assets/{{ troca.jogo_negociador.photo }}" alt="JogoTenho" height="100%" width="100">
+      </div>
+      <img src="assets/setaDupla.jpg" alt="IconeTipo" height="70" width="70" style="margin:10% 12%">
+      <div class="jogosDele">
+        <img src="assets/{{ troca.jogo_interessado.photo }}" alt="JogoQuero" height="100%" width="100">
+      </div>
     </div>
 
-     <img src="assets/setaDupla.jpg" alt="IconeTipo" height="70" width="70" style="margin:10% 12%">
-
-    <div class="jogosDele">
-      <img src="assets/capaJogo22.jpg" alt="JogoQuero" height="100%" width="100">
-    </div>
     <input class="btn btn-info" type="submit" value="Ver negociações" routerLink = "/negociacoes">
 
   </div>

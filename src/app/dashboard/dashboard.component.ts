@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { JOGOS } from '../jogos/mock_jogos';
 import { Jogo } from '../jogos/jogo';
-import { JogoService } from '../jogos/jogo.service'
+import { JogoService } from '../jogos/jogo.service';
+import { Troca } from '../negociacoes/troca';
+import { TrocaService } from '../negociacoes/troca.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,15 +13,24 @@ import { JogoService } from '../jogos/jogo.service'
 export class DashboardComponent implements OnInit {
 
   jogos: Jogo[];
+  trocas: Troca[];
 
-  constructor(private jogoService: JogoService) { }
+  constructor(
+    private jogoService: JogoService,
+    private trocaService: TrocaService
+  ) { }
 
   ngOnInit() {
     this.getJogos();
+    this.getTrocas();
   }
 
   getJogos(): void {
     this.jogos = this.jogoService.getJogos().slice(0, 3);
+  }
+
+  getTrocas(): void {
+    this.trocas = this.trocaService.getTrocas().slice(0, 3);
   }
 
 }

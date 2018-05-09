@@ -15,6 +15,7 @@ import { NegociacoesComponent } from './negociacoes/negociacoes.component';
 import { JogosComponent } from './jogos/jogos.component';
 
 import { JogoService } from './jogos/jogo.service';
+import { TrocaService } from './negociacoes/troca.service';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -44,7 +45,7 @@ const appRoutes: Routes = [
       { enableTracing: true }
     )
   ],
-  providers: [JogoService],
+  providers: [JogoService, TrocaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
