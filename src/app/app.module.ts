@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+/**import { HttpClientModule} from '@angular/common/http';*/
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,13 +17,16 @@ import { JogosComponent } from './jogos/jogos.component';
 
 import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca.service';
+import { JogoInfoComponent } from './jogo-info/jogo-info.component';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
+  { path: 'menu', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'negociacoes', component: NegociacoesComponent },
   { path: 'jogos', component: JogosComponent },
+  { path: 'jogo-info', component: JogoInfoComponent },
 ]
 
 @NgModule({
@@ -36,8 +40,10 @@ const appRoutes: Routes = [
     NavbarComponent,
     NegociacoesComponent,
     JogosComponent,
+    JogoInfoComponent,
   ],
   imports: [
+    /**HttpClientModule,*/
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(
