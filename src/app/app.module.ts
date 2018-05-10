@@ -14,10 +14,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NegociacoesComponent } from './negociacoes/negociacoes.component';
 import { JogosComponent } from './jogos/jogos.component';
+import { JogoInfoComponent } from './jogo-info/jogo-info.component';
+
 
 import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca.service';
 import { InMemoryDataService } from './in-memory-data.service';
+
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -25,8 +28,9 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'negociacoes', component: NegociacoesComponent },
+  { path: 'jogos/:id', component: JogoInfoComponent},
   { path: 'jogos', component: JogosComponent },
-]
+];
 
 @NgModule({
   declarations: [
@@ -39,6 +43,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     NegociacoesComponent,
     JogosComponent,
+    JogoInfoComponent,
   ],
   imports: [
     HttpClientModule,

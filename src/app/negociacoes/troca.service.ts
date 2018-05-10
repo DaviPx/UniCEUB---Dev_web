@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Troca } from './troca';
 import { TROCAS } from './mock_trocas';
 
