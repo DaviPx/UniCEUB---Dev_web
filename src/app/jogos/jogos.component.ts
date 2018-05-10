@@ -19,7 +19,8 @@ export class JogosComponent implements OnInit {
   }
 
   getJogos(): void {
-    this.jogos = this.jogoService.getJogos();
+    this.jogoService.getJogos()
+    .subscribe(jogos => this.jogos = jogos);
   }
 
 }

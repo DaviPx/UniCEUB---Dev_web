@@ -26,7 +26,8 @@ export class DashboardComponent implements OnInit {
   }
 
   getJogos(): void {
-    this.jogos = this.jogoService.getJogos().slice(0, 3);
+    this.jogoService.getJogos()
+    .subscribe(jogos => this.jogos = jogos);
   }
 
   getTrocas(): void {

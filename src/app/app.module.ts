@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-/**import { HttpClientModule} from '@angular/common/http';*/
-
+import { HttpClientModule} from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -17,7 +17,7 @@ import { JogosComponent } from './jogos/jogos.component';
 
 import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca.service';
-import { JogoInfoComponent } from './jogo-info/jogo-info.component';
+import { InMemoryDataService } from './in-memory-data.service';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
@@ -26,7 +26,6 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'negociacoes', component: NegociacoesComponent },
   { path: 'jogos', component: JogosComponent },
-  { path: 'jogo-info', component: JogoInfoComponent },
 ]
 
 @NgModule({
@@ -40,10 +39,12 @@ const appRoutes: Routes = [
     NavbarComponent,
     NegociacoesComponent,
     JogosComponent,
-    JogoInfoComponent,
   ],
   imports: [
-    /**HttpClientModule,*/
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(
