@@ -1,10 +1,12 @@
 <app-navbar>
 </app-navbar>
 
+<input #jogoNome (keyup)="search(jogoNome.value)"/>
+
 
 <li *ngFor="let jogo of jogos">
   <span>{{ jogo.nome }}</span>
   <span>{{ jogo.preco_medio }}</span>
   <span>{{ jogo.votacao }}</span>
-  <span><img src="assets/{{jogo.photo}}"/></span>
+ 
 </li>
