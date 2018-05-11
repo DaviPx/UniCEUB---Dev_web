@@ -1,6 +1,13 @@
 <app-navbar></app-navbar>
 
 <form>
+
+
+ <input class="searchBar"  
+ placeholder="Digite o nome do jogo, que automaticamente será pesquisado"  
+ #jogoNome
+ (keyup)="search(jogoNome.value)"/>
+ 
   <div *ngFor="let jogo of jogos" class='infojogo'>
 
   	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
