@@ -13,17 +13,17 @@ export class JogoInfoComponent implements OnInit {
 
   jogos: Jogo[];
 
-  constructor(private jogoService: JogoService) { }
+  constructor(
+    private jogoService: JogoService
+  ) { }
 
   ngOnInit() {
     this.getJogos();
   }
 
-  
-	
-	getJogos(): void {
+  getJogos(): void {
     this.jogoService.getJogos()
-	.subscribe(jogos => this.jogos = jogos);
+    .subscribe(jogos => this.jogos = jogos);
   }
 
 }

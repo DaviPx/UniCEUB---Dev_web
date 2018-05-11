@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders,HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -27,12 +27,17 @@ export class JogoService {
     return this.http.get<Jogo[]>(this.jogosUrl);
   }
 
-/*getJogoById(id: number): Observable<Jogo> {
-  		const url = `${this.jogosUrl}/?id =${id}`;
-  		return this.http.get<Jogo>(url).pipe(
-    		tap(_ => this.log(`fetched jogo id=${id}`)),
-    		catchError(this.handleError<Jogo>(`getJogo id=${id}`))
-  );
-}*/
+/* PROCURA PELO NOME USANDO HTTP GET */
+  searchJogos(term: string): Observable<Jogo[]> {
+    term = term.trim();
 
+    // Add safe, URL encoded search parameter if there is a search term
+    const options = term ?
+     { params: new HttpParams().set('nome', term) } : {};
+
+    return this.http.get<Jogo[]>(this.jogosUrl, options);
+
+
+
+}
 }
