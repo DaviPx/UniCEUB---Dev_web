@@ -6,7 +6,6 @@ import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Jogo } from './jogo';
-import { JOGOS } from './mock_jogos';
 
 
 const httpOptions = {

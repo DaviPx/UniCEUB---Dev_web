@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Troca } from './troca';
+import { Venda } from './venda';
 
 
 const httpOptions = {
@@ -13,16 +13,16 @@ const httpOptions = {
 };
 
 @Injectable()
-export class TrocaService {
+export class VendaService {
 
-  private trocasUrl = 'api/trocas';
+  private vendasUrl = 'api/vendas';
 
   constructor(
     private http: HttpClient,
   ) { }
 
-  getTrocas(): Observable <Troca[]> {
-    return this.http.get<Troca[]>(this.trocasUrl);
+  getVendas(): Observable <Venda[]> {
+    return this.http.get<Venda[]>(this.vendasUrl);
   }
 
 }

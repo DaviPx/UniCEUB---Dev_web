@@ -19,6 +19,7 @@ import { JogoInfoComponent } from './jogo-info/jogo-info.component';
 
 import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca.service';
+import { VendaService } from './negociacoes/venda.service';
 import { InMemoryDataService } from './in-memory-data.service';
 
 
@@ -57,7 +58,11 @@ const appRoutes: Routes = [
       { enableTracing: true }
     )
   ],
-  providers: [JogoService, TrocaService],
+  providers: [
+    JogoService,
+    TrocaService,
+    VendaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

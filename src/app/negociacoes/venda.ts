@@ -3,4 +3,5 @@ export class Venda {
   jogo: string;
   preco_venda: number;
   interesse: number;
+  comprador_encontrado: boolean;
 }
