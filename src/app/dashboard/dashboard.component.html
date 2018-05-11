@@ -15,6 +15,22 @@
       </div>
     </div>
 
+    <div *ngFor="let venda of vendas">
+      <br>
+      <div class="meusJogos">
+        <img src="assets/{{ venda.jogo.photo }}" alt="JogoTenho" height="100%" width="100">
+      </div>
+      <img src="assets/transporte.png" alt="IconeTipo" height="70" width="70" style="margin:10% 12%">
+      <div class="jogosDele">
+        <div *ngIf="venda.comprador_encontrado">
+          <br> <br> <span class="badge badge-success">Venda Confirmada</span>
+        </div>
+        <div *ngIf="!venda.comprador_encontrado">
+            <br> <br> <span class="badge badge-danger">Venda Não Confirmada</span>
+        </div>
+      </div>
+    </div>
+
     <input class="btn btn-info" type="submit" value="Ver negociações" routerLink = "/negociacoes">
 
   </div>
@@ -41,7 +57,9 @@
         </div>
       </div>
     </div>
+
     <input class="btn btn-info" type="submit" value="Mais jogos da lista" routerLink="/jogos">
+
   </div>
 
 </form>

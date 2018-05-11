@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 import { Jogo } from '../jogos/jogo';
 import { JogoService } from '../jogos/jogo.service';
+
 import { Troca } from '../negociacoes/troca';
 import { TrocaService } from '../negociacoes/troca.service';
+
+import { Venda } from '../negociacoes/venda';
+import { VendaService } from '../negociacoes/venda.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,15 +18,18 @@ export class DashboardComponent implements OnInit {
 
   jogos: Jogo[];
   trocas: Troca[];
+  vendas: Venda[];
 
   constructor(
     private jogoService: JogoService,
-    private trocaService: TrocaService
+    private trocaService: TrocaService,
+    private vendaService: VendaService
   ) { }
 
   ngOnInit() {
     this.getJogos();
     this.getTrocas();
+    this.getVendas();
   }
 
   getJogos(): void {
@@ -31,7 +38,13 @@ export class DashboardComponent implements OnInit {
   }
 
   getTrocas(): void {
-    this.trocas = this.trocaService.getTrocas().slice(0, 3);
+    this.trocaService.getTrocas()
+    .subscribe(trocas => this.trocas = trocas);
+  }
+
+  getVendas(): void {
+    this.vendaService.getVendas()
+    .subscribe(vendas => this.vendas = vendas);
   }
 
 }
