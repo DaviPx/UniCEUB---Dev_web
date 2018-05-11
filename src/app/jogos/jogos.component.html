@@ -1,10 +1,24 @@
-<app-navbar>
-</app-navbar>
+<app-navbar></app-navbar>
+
+<form>
+  <div *ngFor="let jogo of jogos" class='infojogo'>
+
+  	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
+  	<ul>
+  	<li><h4>Nome: {{jogo.nome}}</h4></li> 
+  	<li><h4>Plataforma: {{jogo.plataforma}}</h4></li>
+  	<li><h4>Votação: {{jogo.votacao}} estrelas</h4></li>
+  	<li><h4>Preço no Varejo: R{{jogo.preco_varejo | currency}}</h4></li>
+  	<li><h4>Preço Médio: R{{jogo.preco_medio | currency}}</h4></li>
+  </ul>
+<!--id:2,
+    nome:'Kingdom Hearts',
+    votacao: 4,
+    photo:'capaJogo12.jpg',
+    plataforma: 'PS4',
+    preco_varejo:300,
+    preco_medio:150 -->
 
 
-<li *ngFor="let jogo of jogos">
-  <span>{{ jogo.nome }}</span>
-  <span>{{ jogo.preco_medio }}</span>
-  <span>{{ jogo.votacao }}</span>
-  <span><img src="assets/{{jogo.photo}}"/></span>
-</li>
+</div>
+</form>
