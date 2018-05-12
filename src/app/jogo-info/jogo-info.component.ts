@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { JOGOS } from '../jogos/mock_jogos';
 import { Jogo } from '../jogos/jogo';
 import { JogoService } from '../jogos/jogo.service';
 
