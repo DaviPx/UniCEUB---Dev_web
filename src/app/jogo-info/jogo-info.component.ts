@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { JOGOS } from '../jogos/mock_jogos';
+import { Jogo } from '../jogos/jogo';
+import { JogoService } from '../jogos/jogo.service';
+
 @Component({
   selector: 'app-jogo-info',
   templateUrl: './jogo-info.component.html',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JogoInfoComponent implements OnInit {
 
-  constructor() { }
+  jogos: Jogo[];
+
+  constructor(
+    private jogoService: JogoService
+  ) { }
 
   ngOnInit() {
+    this.getJogos();
+  }
+
+  getJogos(): void {
+    this.jogoService.getJogos()
+    .subscribe(jogos => this.jogos = jogos);
   }
 
 }

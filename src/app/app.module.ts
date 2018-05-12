@@ -5,6 +5,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -25,7 +26,6 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'menu', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'negociacoes', component: NegociacoesComponent },

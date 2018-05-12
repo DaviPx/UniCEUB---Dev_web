@@ -23,4 +23,12 @@ export class JogosComponent implements OnInit {
     .subscribe(jogos => this.jogos = jogos);
   }
 
-}
+  search(textoPesquisado: string) {
+    this.jogoService.searchJogos(textoPesquisado)
+    .subscribe(jogos => this.jogos = jogos);
+    }
+  }
+
+
+
+
