@@ -1,20 +1,12 @@
 <app-navbar></app-navbar>
 
 <form>
-
-	
-
-  <div *ngFor="let jogo of jogos" class='infojogo'>
-
-  	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
-  	<ul>
-  	<li><h4>Nome: {{jogo.nome}}</h4></li> 
-  	<li><h4>Plataforma: {{jogo.plataforma}}</h4></li>
-  	<li><h4>Votação: {{jogo.votacao}} estrelas</h4></li>
-  	<li><h4>Preço no Varejo: R{{jogo.preco_varejo | currency}}</h4></li>
+<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
+<ul>
+ <li><h4>Nome: {{jogo.nome}}</h4></li>
+ <li><h4>Plataforma: {{jogo.plataforma}}</h4></li>
+ <li><h4>Votação: {{jogo.votacao}} estrelas</h4></li>
+ <li><h4>Preço no Varejo: R{{jogo.preco_varejo | currency}}</h4></li>
  <li><h4>Preço Médio: R{{jogo.preco_medio | currency}}</h4></li>
-  
-  </ul>
-
-</div>
+</ul>
 </form>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Jogo } from '../jogos/jogo';
 import { JogoService } from '../jogos/jogo.service';
@@ -10,19 +12,22 @@ import { JogoService } from '../jogos/jogo.service';
 })
 export class JogoInfoComponent implements OnInit {
 
-  jogos: Jogo[];
+  @Input() jogo: Jogo;
 
   constructor(
-    private jogoService: JogoService
+    private jogoService: JogoService,
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
 
   ngOnInit() {
-    this.getJogos();
+    this.getJogo();
   }
 
-  getJogos(): void {
-    this.jogoService.getJogos()
-    .subscribe(jogos => this.jogos = jogos);
+  getJogo(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.jogoService.getJogo(id)
+        .subscribe(jogo => this.jogo = jogo);
   }
 
 }

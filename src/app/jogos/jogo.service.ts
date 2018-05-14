@@ -36,7 +36,10 @@ export class JogoService {
 
     return this.http.get<Jogo[]>(this.jogosUrl, options);
 
+  }
 
-
-}
+  getJogo(id: number): Observable<Jogo> {
+    const url = `${this.jogosUrl}/${id}`;
+    return this.http.get<Jogo>(url);
+  }
 }
