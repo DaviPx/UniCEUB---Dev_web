@@ -8,7 +8,7 @@
  #jogoNome
  (keyup)="search(jogoNome.value)"/>
  
-  <div *ngFor="let jogo of jogos" class='infojogo'>
+  <div *ngFor="let jogo of jogos" class='infojogo' routerLink="/jogos/{{jogo.id}}">
 
   	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
   	<ul>

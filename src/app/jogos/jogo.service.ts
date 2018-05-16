@@ -30,7 +30,6 @@ export class JogoService {
   searchJogos(term: string): Observable<Jogo[]> {
     term = term.trim();
 
-    // Add safe, URL encoded search parameter if there is a search term
     const options = term ?
      { params: new HttpParams().set('nome', term) } : {};
 
