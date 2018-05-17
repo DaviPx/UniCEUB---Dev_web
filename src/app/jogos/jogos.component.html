@@ -7,7 +7,7 @@
  placeholder="Digite o nome do jogo, que automaticamente será pesquisado"  
  #jogoNome
  (keyup)="search(jogoNome.value)"/>
- 
+ <div class="fundoDasColunas">
   <div *ngFor="let jogo of jogos" class='infojogo' routerLink="/jogos/{{jogo.id}}">
 
   	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
@@ -27,6 +27,7 @@
     preco_medio:150 -->
 
 
+</div>
 </div>
 </form>
 
