@@ -8,7 +8,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 1,
         nome: 'Final Fantasy XII',
         votacao: 5,
-        photo: 'capaJogo22.jpg',
+        photo: 'ff12.jpg',
         plataforma: 'PS4',
         preco_varejo: 200,
         preco_medio: 90
@@ -17,7 +17,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 2,
         nome: 'Kingdom Hearts',
         votacao: 4,
-        photo: 'capaJogo12.jpg',
+        photo: 'kh2.5.jpg',
         plataforma: 'PS4',
         preco_varejo: 300,
         preco_medio: 150
@@ -26,7 +26,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 3,
         nome: 'God of War',
         votacao: 5,
-        photo: 'gow.png',
+        photo: 'gow.jpg',
         plataforma: 'PS4',
         preco_varejo: 200,
         preco_medio: 150
@@ -49,7 +49,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 1,
           nome: 'Final Fantasy XII',
           votacao: 5,
-          photo: 'capaJogo22.jpg',
+          photo: 'ff12.jpg',
           plataforma: 'PS4',
           preco_varejo: 200,
           preco_medio: 90
@@ -58,7 +58,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 2,
           nome: 'Kingdom Hearts',
           votacao: 4,
-          photo: 'capaJogo12.jpg',
+          photo: 'kh2.5.jpg',
           plataforma: 'PS4',
           preco_varejo: 300,
           preco_medio: 150
@@ -72,7 +72,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 2,
           nome: 'Kingdom Hearts',
           votacao: 4,
-          photo: 'capaJogo12.jpg',
+          photo: 'kh2.5.jpg',
           plataforma: 'PS4',
           preco_varejo: 300,
           preco_medio: 150
@@ -81,7 +81,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 1,
           nome: 'Final Fantasy XII',
           votacao: 5,
-          photo: 'capaJogo22.jpg',
+          photo: 'ff12.jpg',
           plataforma: 'PS4',
           preco_varejo: 200,
           preco_medio: 90
@@ -98,7 +98,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 1,
           nome: 'Final Fantasy XII',
           votacao: 5,
-          photo: 'capaJogo22.jpg',
+          photo: 'ff12.jpg',
           plataforma: 'PS4',
           preco_varejo: 200,
           preco_medio: 90
@@ -113,7 +113,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 2,
           nome: 'Kingdom Hearts',
           votacao: 4,
-          photo: 'capaJogo12.jpg',
+          photo: 'kh2.5.jpg',
           plataforma: 'PS4',
           preco_varejo: 300,
           preco_medio: 150
