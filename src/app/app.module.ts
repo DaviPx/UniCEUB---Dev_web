@@ -22,6 +22,8 @@ import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca.service';
 import { VendaService } from './negociacoes/venda.service';
 import { InMemoryDataService } from './in-memory-data.service';
+import { TrocaComponent } from './negociacoes/troca/troca.component';
+import { VendaComponent } from './negociacoes/venda/venda.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +33,8 @@ const appRoutes: Routes = [
   { path: 'negociacoes', component: NegociacoesComponent },
   { path: 'jogos/:id', component: JogoInfoComponent},
   { path: 'jogos', component: JogosComponent },
+  { path: 'trocas', component: TrocaComponent },
+  { path: 'vendas', component: VendaComponent },
 ];
 
 @NgModule({
@@ -45,6 +49,8 @@ const appRoutes: Routes = [
     NegociacoesComponent,
     JogosComponent,
     JogoInfoComponent,
+    TrocaComponent,
+    VendaComponent,
   ],
   imports: [
     HttpClientModule,

@@ -1,8 +1,14 @@
 <app-navbar>
 </app-navbar>
+<br>
 
-<p>
- Não esta pronta por culpa do Carlos Damazio!!!
-
-</p>
-<h1> HUEHUEHUE </h1>
+<div class="container">
+  <div class="panel-current-negotiation">
+    <div *ngIf="status === 'troca'">
+      <app-troca></app-troca>
+    </div>
+    <div *ngIf="status === 'venda'">
+      <app-venda></app-venda>
+    </div>
+  </div>
+</div>

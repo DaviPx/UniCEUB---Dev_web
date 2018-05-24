@@ -1,0 +1,25 @@
+  <div class="row">
+      <div class="col-sm-4">
+          Seu jogo
+      </div>
+      <div class="col-sm-4">
+          Preço em reais
+      </div>
+      <div class="col-sm-4">
+          Comprador
+      </div>
+  </div>
+  <br>
+  <div *ngFor="let troca of trocas">
+    <div class="row row-single-troca">
+      <div class="col-sm-4">
+        {{ troca.jogo_negociador.nome }}
+      </div>
+      <div class="col-sm-4">
+        {{ troca.interesse }}
+      </div>
+      <div class="col-sm-4">
+        {{ troca.jogo_interessado.nome }}
+      </div>
+    </div>
+  </div>
