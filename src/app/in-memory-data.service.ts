@@ -86,9 +86,36 @@ export class InMemoryDataService implements InMemoryDbService {
           preco_varejo: 200,
           preco_medio: 90
         },
-        interesse: 5,
+        interesse: 3,
+        status_troca: true
+      },
+      {
+        id: 3,
+        jogo_negociador: {
+          id: 4,
+          nome: 'Half-Life 3',
+          votacao: 5,
+          photo: 'hl3.jpeg',
+          plataforma: 'PS4',
+          preco_varejo: 200,
+          preco_medio: 180
+        },
+
+        jogo_interessado: {
+          id: 3,
+          nome: 'God of War',
+          votacao: 5,
+          photo: 'gow.jpg',
+          plataforma: 'PS4',
+          preco_varejo: 200,
+          preco_medio: 150
+        },
+        interesse: 2,
         status_troca: true
       }
+
+
+
     ];
 
     const vendas = [

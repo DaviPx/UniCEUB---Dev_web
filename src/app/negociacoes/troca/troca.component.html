@@ -1,22 +1,27 @@
 <div class="row">
     <div class="col-sm-4">
-        Seu jogo
+        <h4>Seu jogo</h4>
     </div>
     <div class="col-sm-4">
-        Grau de interesse
+        <h4>Grau de interesse </h4>
     </div>
     <div class="col-sm-4">
-        Jogo interessado
+        <h4>Jogo interessado</h4>
     </div>
 </div>
 <br>
-<div *ngFor="">
+<div *ngFor="let troca of trocas">
+
   <div class="row row-single-troca">
     <div class="col-sm-4">
+     <img src="assets/{{ troca.jogo_negociador.photo }}" alt="JogoTenho" height="100%" width="150">
     </div>
     <div class="col-sm-4">
+    	<h1>  {{ troca.interesse }} / 5 </h1>
     </div>
     <div class="col-sm-4">
+    	<img src="assets/{{ troca.jogo_interessado.photo }}" alt="JogoQuero" height="100%" width="150">
+    	
     </div>
   </div>
 </div>

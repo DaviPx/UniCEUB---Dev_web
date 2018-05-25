@@ -17,8 +17,8 @@ import { JogoInfoComponent } from './jogo-info/jogo-info.component';
 
 
 import { JogoService } from './jogos/jogo.service';
-import { TrocaService } from './negociacoes/troca.service';
-import { VendaService } from './negociacoes/venda.service';
+import { TrocaService } from './negociacoes/troca/troca.service';
+import { VendaService } from './negociacoes/venda/venda.service';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TrocaComponent } from './negociacoes/troca/troca.component';
 import { VendaComponent } from './negociacoes/venda/venda.component';
