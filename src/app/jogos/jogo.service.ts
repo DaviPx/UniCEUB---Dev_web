@@ -21,12 +21,15 @@ export class JogoService {
     private http: HttpClient,
   ) { }
 
-
+/* PEGA SO OS JOGOS, SEM TROCAS OU VENDAS*/
   getJogos(): Observable <Jogo[]> {
     return this.http.get<Jogo[]>(this.jogosUrl);
   }
 
+
+
 /* PROCURA PELO NOME USANDO HTTP GET */
+
   searchJogos(term: string): Observable<Jogo[]> {
     term = term.trim();
 
@@ -36,6 +39,10 @@ export class JogoService {
     return this.http.get<Jogo[]>(this.jogosUrl, options);
 
   }
+
+
+
+/* PEGA JOGOS POR ID NA QUERY */
 
   getJogo(id: number): Observable<Jogo> {
     const url = `${this.jogosUrl}/${id}`;

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Jogo } from '../jogos/jogo';
 import { JogoService } from '../jogos/jogo.service';
 
-import { Troca } from '../negociacoes/troca';
-import { TrocaService } from '../negociacoes/troca.service';
+import { Troca } from '../negociacoes/troca/troca';
+import { TrocaService } from '../negociacoes/troca/troca.service';
 
-import { Venda } from '../negociacoes/venda';
-import { VendaService } from '../negociacoes/venda.service';
+import { Venda } from '../negociacoes/venda/venda';
+import { VendaService } from '../negociacoes/venda/venda.service';
 
 @Component({
   selector: 'app-dashboard',

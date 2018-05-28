@@ -1,4 +1,4 @@
-import { Jogo } from '../jogos/jogo';
+import { Jogo } from '../../jogos/jogo';
 
 export class Troca {
   id: number;
