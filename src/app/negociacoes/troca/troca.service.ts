@@ -25,4 +25,8 @@ export class TrocaService {
     return this.http.get<Troca[]>(this.trocasUrl);
   }
 
+  addTroca (troca: Troca): Observable<Troca> {
+    return this.http.post<Troca>(this.trocasUrl, troca, httpOptions);
+  }
+
 }
