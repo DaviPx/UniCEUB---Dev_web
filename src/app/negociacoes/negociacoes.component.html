@@ -3,6 +3,10 @@
 <br>
 
 <div class="container">
+  <span>
+    <input [disabled]="status == 'troca'" class="btn btn-primary" type="button" value="Trocas" (click)="trocaAba('troca')"/>
+    <input [disabled]="status == 'venda'"class="btn btn-primary" type="button" value="Vendas" (click)="trocaAba('venda')"/>
+  </span>
   <div class="panel-current-negotiation">
     <div *ngIf="status === 'troca'">
       <app-troca></app-troca>

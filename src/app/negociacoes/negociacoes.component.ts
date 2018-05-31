@@ -15,7 +15,7 @@ export class NegociacoesComponent implements OnInit {
 
   trocas: Troca[];
   vendas: Venda[];
-  status = 'troca';
+  status = 'venda';
 
   constructor(
     private trocaService: TrocaService,
@@ -37,4 +37,7 @@ export class NegociacoesComponent implements OnInit {
     .subscribe(vendas => this.vendas = vendas);
   }
 
+  trocaAba(tipo: string): void {
+    this.status = tipo;
+  }
 }
