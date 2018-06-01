@@ -9,7 +9,7 @@ import { TrocaService } from './troca.service';
 })
 export class TrocaComponent implements OnInit {
 
-trocas: Troca[];
+  trocas: Troca[];
 
   constructor(private trocaService: TrocaService) { }
 

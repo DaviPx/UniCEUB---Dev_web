@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Jogo } from '../../../jogos/jogo';
-import { SelJogos } from '../form-data-troca-wizard/formDataTroca';
 import { FormDataTrocaService } from '../form-data-troca-wizard/form-data-troca.service';
+import { Jogo } from '../../../jogos/jogo';
 import { JogoService } from '../../../jogos/jogo.service';
+import { SelJogos } from '../form-data-troca-wizard/formDataTroca';
 
 @Component({
   selector: 'app-trocawizard-1step',
@@ -34,7 +34,7 @@ export class Trocawizard1stepComponent implements OnInit {
     if (!form.valid) {
         return false;
     }
-        
+
     this.formDataTrocaService.setSelJogos(this.seljogos);
     return true;
   }

@@ -4,7 +4,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { NgxCurrencyModule } from "ngx-currency";
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -18,13 +18,15 @@ import { TrocaComponent } from './negociacoes/troca/troca.component';
 import { VendaComponent } from './negociacoes/venda/venda.component';
 import { Trocawizard1stepComponent } from './negociacoes/troca/trocawizard-1step/trocawizard-1step.component';
 import { Trocawizard2stepComponent } from './negociacoes/troca/trocawizard-2step/trocawizard-2step.component';
-
+import { Vendawizard1stepComponent } from './negociacoes/venda/vendawizard-1step/vendawizard-1step.component';
+import { Vendawizard2stepComponent } from './negociacoes/venda/vendawizard-2step/vendawizard-2step.component';
 
 import { JogoService } from './jogos/jogo.service';
 import { TrocaService } from './negociacoes/troca/troca.service';
 import { VendaService } from './negociacoes/venda/venda.service';
 import { FormDataTrocaService } from './negociacoes/troca/form-data-troca-wizard/form-data-troca.service'; 
 import { InMemoryDataService } from './in-memory-data.service';
+import { FormDataVendaService } from './negociacoes/venda/form-data-venda-wizard/form-data-venda.service';
 
 
 const appRoutes: Routes = [
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
   { path: 'trocas/criar/troca', component: Trocawizard2stepComponent },
 
   { path: 'vendas', component: VendaComponent },
+  { path: 'vendas/criar/seljogo', component: Vendawizard1stepComponent },
+  { path: 'vendas/criar/venda', component: Vendawizard2stepComponent },
 ];
 
 @NgModule({
@@ -58,6 +62,8 @@ const appRoutes: Routes = [
     VendaComponent,
     Trocawizard1stepComponent,
     Trocawizard2stepComponent,
+    Vendawizard1stepComponent,
+    Vendawizard2stepComponent,
   ],
   imports: [
     HttpClientModule,
@@ -70,12 +76,14 @@ const appRoutes: Routes = [
       { enableTracing: true }
     ),
     FormsModule,
+    NgxCurrencyModule,
   ],
   providers: [
     JogoService,
     TrocaService,
     VendaService,
     FormDataTrocaService,
+    FormDataVendaService,
   ],
   bootstrap: [AppComponent]
 })

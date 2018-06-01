@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { DataTroca, FormData } from '../form-data-troca-wizard/formDataTroca';
 import { Troca } from '../troca';
 import { TrocaService } from '../troca.service';
-import { TrocaComponent } from '../troca.component';
 import { FormDataTrocaService } from '../form-data-troca-wizard/form-data-troca.service';
 
 @Component({
@@ -34,7 +33,7 @@ export class Trocawizard2stepComponent implements OnInit {
     if (!form.valid) {
         return false;
     }
-        
+
     this.formDataTrocaService.setDataTroca(this.datatroca);
     return true;
   }
@@ -42,7 +41,7 @@ export class Trocawizard2stepComponent implements OnInit {
   enviarTroca(form: any) {
     if (this.save(form)) {
         this.wholeForm = this.formDataTrocaService.getFormData();
-        
+
         const troca = new Troca();
         troca.jogo_interessado = this.wholeForm.jogo_interessado;
         troca.jogo_negociador = this.wholeForm.jogo_negociador;
@@ -53,8 +52,6 @@ export class Trocawizard2stepComponent implements OnInit {
         .subscribe(troca => {
           this.trocas.push(troca);
         });
-      
-        console.log(this.trocas);
 
         this.router.navigate(['/negociacoes']);
     }
