@@ -3,21 +3,61 @@
 <form>
 
 
- <input class="searchBar"
- placeholder="Digite o nome do jogo, que automaticamente será pesquisado"
- #jogoNome
- (keyup)="search(jogoNome.value)"/>
- <div class="fundoDasColunas">
-  <div *ngFor="let jogo of jogos" class='infojogo' routerLink="/jogos/{{jogo.id}}">
+<div class="searchArea">
+ <input id="searchBar" #jogoNome  placeholder="Digite o nome do jogo" />
 
-  	<img src= "assets/{{jogo.photo}}" alt='fotoJogo'>
+ <button type="button"  id="btn-search" (click)="search(this.jogoNome.value,'nome')"> Buscar </button>
+ 
+</div>
+
+
+
+<div class="navbarLimit">
+<nav class="navbar  navbar-expand-lg navbar-light bg-primary">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+        
+           <button type="button" class="btn-menu"   (click)="search('switch','plataforma')"> Switch </button>
+          
+            <button type="button" class="btn-menu"   (click)="search('ps4','plataforma')"> PS4 </button>
+          
+          
+            <button type="button" class="btn-menu"   (click)="search('ps3','plataforma')"> PS3 </button>
+          
+          
+             <button type="button" class="btn-menu"   (click)="search('nintendo ds','plataforma')"> Nintendo DS </button>
+          
+          
+             <button type="button" class="btn-menu"   (click)="search('switch','plataforma')"> Switch </button>
+          
+          
+             <button type="button" class="btn-menu"   (click)="search('xbox 360','plataforma')"> Xbox 360 </button>
+          
+          
+             <button type="button" class="btn-menu"   (click)="search('xbox one','plataforma')"> Xbox One </button>
+        
+        </ul>
+      </div>
+</nav>
+ 
+ <div class="fundoDasColunas">
+
+  <div *ngFor="let jogo of jogos" class='infojogo' >
+
+  	<img src= "assets/{{jogo.photo}}" alt='fotoJogo' routerLink="/jogos/{{jogo.id}}">
   	<ul>
-  	<li><h4>Nome: {{jogo.nome}}</h4></li>
-    <li><h4>Plataforma: {{jogo.plataforma}}</h4></li>
-    <li><h4>Votação: {{jogo.votacao}}</h4></li>
+  	<li><p>Nome: {{ jogo.nome }}</p></li>
+  	<br> 
+    <li><p>Plataforma: {{ jogo.plataforma }}</p></li>
+    
    
   </ul>
   </div>
  </div>
+ </div>
 </form>
-
