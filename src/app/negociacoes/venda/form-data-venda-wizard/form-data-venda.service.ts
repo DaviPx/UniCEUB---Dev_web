@@ -26,6 +26,7 @@ export class FormDataVendaService {
 
   getDataVenda(): DataVenda {
     let datavenda: DataVenda = {
+      preco_venda: this.formData.preco_venda,
       interesse: this.formData.interesse,
       comprador_encontrado: this.formData.comprador_encontrado
     };

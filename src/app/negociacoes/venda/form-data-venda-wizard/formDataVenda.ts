@@ -19,6 +19,7 @@ export class SelJogo {
 }
 
 export class DataVenda {
+  preco_venda: number = 0;
   interesse: number = 0;
   comprador_encontrado = false;
 }
