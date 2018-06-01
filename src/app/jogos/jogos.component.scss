@@ -1,18 +1,49 @@
 
-.searchBar{
+
+#searchBar{
 margin: 1%;
-width: 70%;
+width: 50%;
 }
 
-.fundoDasColunas{
+plataformaType{
+ background: #007fff;   
+
+
+}
+#btn-search{
+    
+    width: inherit;
+    background: #007fff;
+    border-color: #007fff;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.btn-menu{
+
+    width: inherit;
+    background: inherit;
+    color: white;
+    border: none;
+
+}
+
+
+
+.navbarLimit{
+
+    margin-left:1%;
     background-color: antiquewhite;
     position: absolute;
     width: 90%;
     border: 3px solid #000000;
+    border-radius: 5px;
 
 }
 
 .infojogo {
+
     float:left;
     background: #FFFFFF;
     padding: 12px;
@@ -33,8 +64,8 @@ width: 70%;
 
     img{
     float:left;
-width:10%;
-height:20%;
+width:150px;
+height:170px;
 }
 
 
