@@ -11,11 +11,24 @@
                     <div class="form-group">
                         <label for="interesse" class="control-label"><h4>Interesse</h4></label>
                         <div class="slidecontainer">
-                            <input type="range" min="0" max="5" value="0" class="slider" id="interesse">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="interesse">
+
+                              <ul class="range-labels">
+                                    <li>1</li>
+                                    <li>2</li>                              
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                </ul>
+
+
                         </div>
                         <br>
                         <label for="precovenda" class="control-label">Preço de venda</label>
                         <div class="slidecontainer">
+
+
+
                             <input type="text" currencyMask [(ngModel)]="datavenda.preco_venda" name="precovenda" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"/>
                         </div>
                     </div>
