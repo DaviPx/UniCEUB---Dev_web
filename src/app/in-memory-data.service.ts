@@ -45,7 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Halo',
         votacao: 4,
         photo: 'halo.jpg',
-        plataforma: 'XBOX',
+        plataforma: 'XBOX one',
         preco_varejo: 249,
         preco_medio: 130
       },
@@ -54,7 +54,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Sunset Overdrive',
         votacao: 3,
         photo: 'sunover.jpg',
-        plataforma: 'XBOX',
+        plataforma: 'XBOX one',
         preco_varejo: 249,
         preco_medio: 130
       },
@@ -81,7 +81,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'PUBG',
         votacao: 5,
         photo: 'pubg.jpg',
-        plataforma: 'XBOX',
+        plataforma: 'XBOX one',
         preco_varejo: 200,
         preco_medio: 150
       },
@@ -135,7 +135,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Battlefield 4',
         votacao: 4,
         photo: 'bf4.jpg',
-        plataforma: 'XBOX360',
+        plataforma: 'XBOX 360',
         preco_varejo: 120,
         preco_medio: 80
       },
@@ -144,7 +144,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Rayman Origins',
         votacao: 5,
         photo: 'rayman.jpg',
-        plataforma: 'XBOX360',
+        plataforma: 'XBOX 360',
         preco_varejo: 120,
         preco_medio: 70
       },
@@ -153,7 +153,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Minecraft',
         votacao: 5,
         photo: 'minecraft.jpg',
-        plataforma: 'XBOX360',
+        plataforma: 'XBOX 360',
         preco_varejo: 140,
         preco_medio: 80
       },
@@ -189,7 +189,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Pokemon Diamond',
         votacao: 5,
         photo: 'poked.jpg',
-        plataforma: 'DS',
+        plataforma: 'nintendo DS',
         preco_varejo: 150,
         preco_medio: 100
       },
@@ -198,7 +198,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Pokemon Pearl',
         votacao: 5,
         photo: 'pokep.jpg',
-        plataforma: 'DS',
+        plataforma: 'nintendo DS',
         preco_varejo: 150,
         preco_medio: 100
       },
@@ -207,7 +207,7 @@ export class InMemoryDataService implements InMemoryDbService {
         nome: 'Super Mario 64 DS',
         votacao: 5,
         photo: 'mario64.jpg',
-        plataforma: 'DS',
+        plataforma: 'nintendo DS',
         preco_varejo: 150,
         preco_medio: 100
       },

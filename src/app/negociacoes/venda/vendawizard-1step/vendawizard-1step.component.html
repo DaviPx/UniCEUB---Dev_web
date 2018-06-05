@@ -1,0 +1,26 @@
+<app-navbar>
+</app-navbar>
+
+<form #selJogo="ngForm" class="editForm" novalidate>
+  <div class="tab-pane panel-wizard-1step">
+    <h4 class="head text-center">{{title}}</h4>
+    <br/>
+    <div class='row'>
+        <div class='col-xs-12'>
+            <div class="row">
+              <div class="form-group">
+                  <label for="jogo-negociador" class="control-label">Seu jogo</label>
+                  <select class="form-control" [(ngModel)]="seljogo.jogo" #jogo="ngModel" name="jogo" id="jogo">
+                    <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
+                  </select>
+                  {{ seljogo.jogo }}
+                  <div class="alert alert-danger" [hidden]="jogo.valid">{{ seljogo.jogo }}</div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+                <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!seljogo.jogo" (click)="goToNext(selJogo)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+        </div>
+    </div>
+  </div>
+</form>

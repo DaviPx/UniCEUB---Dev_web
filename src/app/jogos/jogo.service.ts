@@ -28,13 +28,14 @@ export class JogoService {
 
 
 
-/* PROCURA PELO NOME USANDO HTTP GET */
+/* COMPARA VALOR COM PROPRIEDADE DO OBJETO USANDO HTTP GET */
 
-  searchJogos(term: string): Observable<Jogo[]> {
+  searchJogos(term: string, type:string): Observable<Jogo[]> { // RECEBE O TEXTO PESQUISADO E QUAL TIPO DE INFORMAÇÃO BUSCAR
     term = term.trim();
-
+    type = type.trim();
+    
     const options = term ?
-     { params: new HttpParams().set('nome', term) } : {};
+     { params: new HttpParams().set(type, term) } : {};
 
     return this.http.get<Jogo[]>(this.jogosUrl, options);
 

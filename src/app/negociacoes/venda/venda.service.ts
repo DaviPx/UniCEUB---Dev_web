@@ -25,4 +25,7 @@ export class VendaService {
     return this.http.get<Venda[]>(this.vendasUrl);
   }
 
+  addVenda (venda: Venda): Observable<Venda> {
+    return this.http.post<Venda>(this.vendasUrl, venda, httpOptions);
+  }
 }
