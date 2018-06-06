@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
 
   getJogos(): void {
     this.jogoService.getJogos()
-    .subscribe(jogos => this.jogos = jogos);
+    .subscribe(jogos => this.jogos = jogos.slice(0, 6));
   }
 
   getTrocas(): void {
