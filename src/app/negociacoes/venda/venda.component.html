@@ -1,19 +1,21 @@
   <div class="row">
       <div class="col-sm-6">
-          Seu jogo
+          <h4>Seu jogo </h4>
       </div>
       <div class="col-sm-6">
-          Preço em reais
+          <h4>Preço</h4>
       </div>
   </div>
   <br>
   <div *ngFor="let venda of vendas">
     <div class="row row-single-troca">
-      <div class="col-sm-6">
-          {{ venda.jogo.nome }}
+      <div class="col-photo">
+      	 <img src="assets/{{venda.jogo.photo}} " width="40%">
+          <h2>{{ venda.jogo.nome }}</h2>
+      	 
       </div>
-      <div class="col-sm-6">
-        R$ {{ venda.preco_venda }}
+      <div class="col-price">
+        <h3>R{{ venda.preco_venda | currency }} </h3>
       </div>
     </div>
   </div>

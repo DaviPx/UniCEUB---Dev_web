@@ -15,7 +15,7 @@
                         <select class="form-control" [(ngModel)]="seljogos.jogo_negociador" #jogonegociador="ngModel" name="jogonegociador" id="jogo-negociador">
                           <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
                         </select>
-                        {{ seljogos.jogo_negociador }}
+                       <!-- {{ seljogos.jogo_negociador.nome }} -->
                         <div class="alert alert-danger" [hidden]="jogonegociador.valid">{{ seljogos.jogo_negociador }}</div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                         <select class="form-control" [(ngModel)]="seljogos.jogo_interessado" #jogointeressado="ngModel" name="jogointeressado" id="jogo-interessado">
                           <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
                         </select>
-                        {{ seljogos.jogo_interessado }}
+                     <!--   {{ seljogos.jogo_interessado.nome }} -->
                         <div class="alert alert-danger" [hidden]="jogointeressado.valid">{{ seljogos.jogo_interessado }}</div>
                     </div>
                 </div>

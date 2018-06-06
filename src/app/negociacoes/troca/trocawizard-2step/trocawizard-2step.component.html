@@ -11,14 +11,23 @@
                     <div class="form-group">
                         <label for="interesse" class="control-label">Interesse</label>
                         <div class="slidecontainer">
-                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                               
+
                         </div>
+                        <ul class="range-labels">
+                                    <li>1</li>
+                                    <li>2</li>                              
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                </ul>
                     </div>
                 </div>
             </div>
 
             <div class="form-group text-center">
-                <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!dataTroca.valid" (click)="enviarTroca(dataTroca)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!dataTroca.valid" (click)="enviarTroca(dataTroca)"> Finalizar <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
             </div>
         </div>
     </div>
