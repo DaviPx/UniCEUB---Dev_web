@@ -11,7 +11,7 @@ export class FormDataVendaService {
   private isDataVendaValid = false;
 
   getSelJogo(): SelJogo {
-    
+
     let seljogo: SelJogo = {
       jogo: this.formData.jogo
     };
@@ -36,6 +36,7 @@ export class FormDataVendaService {
 
   setDataVenda(data: DataVenda) {
     this.formData.interesse = data.interesse;
+    this.formData.preco_venda = data.preco_venda;
     this.formData.comprador_encontrado = data.comprador_encontrado;
   }
 

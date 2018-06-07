@@ -45,7 +45,7 @@ export class Vendawizard2stepComponent implements OnInit {
         const venda = new Venda();
         venda.jogo = this.wholeForm.jogo;
         venda.interesse = this.wholeForm.interesse;
-        venda.preco_venda = Number(this.wholeForm.preco_venda);
+        venda.preco_venda = this.wholeForm.preco_venda;
         venda.comprador_encontrado = false;
 
         console.log(venda);
