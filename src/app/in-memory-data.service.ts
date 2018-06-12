@@ -266,7 +266,7 @@ export class InMemoryDataService implements InMemoryDbService {
           id: 4,
           nome: 'Half-Life 3',
           votacao: 5,
-          photo: 'hl3.jpeg',
+          photo: 'hl3.jpg',
           plataforma: 'PS4',
           preco_varejo: 200,
           preco_medio: 180
