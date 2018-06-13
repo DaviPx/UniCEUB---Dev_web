@@ -41,7 +41,7 @@ export class Trocawizard1stepComponent implements OnInit {
 
   goToNext(form: any) {
       if (this.save(form)) {
-          this.router.navigate(['/trocas/criar/troca']);
+          this.formDataTrocaService.changeStep(2);
       }
   }
 }

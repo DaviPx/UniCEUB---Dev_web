@@ -1,6 +1,3 @@
-<app-navbar>
-</app-navbar>
-
 <form #selJogos="ngForm" class="editForm" novalidate>
   <div class="tab-pane panel-wizard-1step">
     <h4 class="head text-center">{{title}}</h4>
@@ -31,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="form-group text-center">
+            <div class="modal-footer">
                 <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!seljogos.jogo_interessado || !seljogos.jogo_negociador" (click)="goToNext(selJogos)"> Proximo passo: nivel de interesse  <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
             </div>
         </div>

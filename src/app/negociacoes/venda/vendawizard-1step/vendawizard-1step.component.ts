@@ -41,7 +41,7 @@ export class Vendawizard1stepComponent implements OnInit {
 
   goToNext(form: any) {
       if (this.save(form)) {
-          this.router.navigate(['/vendas/criar/venda']);
+          this.formDataVendaService.changeStep(2)
       }
   }
 }

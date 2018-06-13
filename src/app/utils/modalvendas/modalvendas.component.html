@@ -1,0 +1,17 @@
+<input class="btn btn-primary" type="button" value="Novo interesse em venda"  (click)="open(modalvendas)"/>
+
+
+<ng-template #modalvendas let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Adicionar venda</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" *ngIf="formDataVendaService.step === 1">
+    <app-vendawizard-1step></app-vendawizard-1step>
+  </div>
+  <div class="modal-body" *ngIf="formDataVendaService.step === 2">
+    <app-vendawizard-2step></app-vendawizard-2step>
+  </div>
+</ng-template>

@@ -5,6 +5,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCurrencyModule } from "ngx-currency";
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -27,6 +28,8 @@ import { VendaService } from './negociacoes/venda/venda.service';
 import { FormDataTrocaService } from './negociacoes/troca/form-data-troca-wizard/form-data-troca.service'; 
 import { InMemoryDataService } from './in-memory-data.service';
 import { FormDataVendaService } from './negociacoes/venda/form-data-venda-wizard/form-data-venda.service';
+import { ModalComponent } from './utils/modaltrocas/modal.component';
+import { ModalvendasComponent } from './utils/modalvendas/modalvendas.component';
 
 
 const appRoutes: Routes = [
@@ -64,6 +67,8 @@ const appRoutes: Routes = [
     Trocawizard2stepComponent,
     Vendawizard1stepComponent,
     Vendawizard2stepComponent,
+    ModalComponent,
+    ModalvendasComponent,
   ],
   imports: [
     HttpClientModule,
@@ -77,6 +82,7 @@ const appRoutes: Routes = [
     ),
     FormsModule,
     NgxCurrencyModule,
+    NgbModule.forRoot(),
   ],
   providers: [
     JogoService,

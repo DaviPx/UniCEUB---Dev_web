@@ -7,6 +7,7 @@ import { FormData, SelJogos, DataTroca } from './formDataTroca';
 export class FormDataTrocaService {
 
   private formData: FormData = new FormData();
+  private step: number = 1;
   private isSelJogosValid = false;
   private isDataTrocaValid = false;
 
@@ -55,6 +56,10 @@ export class FormDataTrocaService {
     return this.isSelJogosValid &&
            this.isDataTrocaValid &&
            this.isFormValid;
+  }
+
+  changeStep(step: number) {
+    this.step = step;
   }
 
 }

@@ -1,6 +1,3 @@
-<app-navbar>
-</app-navbar>
-
 <form #dataTroca="ngForm" class="editForm" novalidate>
   <div class="tab-pane panel-wizard-2step">
     <br/>
@@ -26,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="form-group text-center">
+            <div class="modal-footer">
                 <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!dataTroca.valid" (click)="enviarTroca(dataTroca)"> Finalizar <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
             </div>
         </div>

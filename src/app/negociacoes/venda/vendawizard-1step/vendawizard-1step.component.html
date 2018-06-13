@@ -1,6 +1,3 @@
-<app-navbar>
-</app-navbar>
-
 <form #selJogo="ngForm" class="editForm" novalidate>
   <div class="tab-pane panel-wizard-1step">
     <h4 class="head text-center">{{title}}</h4>
@@ -13,7 +10,6 @@
                   <select class="form-control" [(ngModel)]="seljogo.jogo" #jogo="ngModel" name="jogo" id="jogo">
                     <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
                   </select>
-                  {{ seljogo.jogo }}
                   <div class="alert alert-danger" [hidden]="jogo.valid">{{ seljogo.jogo }}</div>
               </div>
             </div>

@@ -53,7 +53,7 @@ export class Trocawizard2stepComponent implements OnInit {
           this.trocas.push(troca);
         });
 
-        this.router.navigate(['/negociacoes']);
+        this.formDataTrocaService.changeStep(1);
     }
   }
 

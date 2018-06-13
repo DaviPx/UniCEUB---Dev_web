@@ -6,9 +6,8 @@
   <span class="tabs">
     <input [disabled]="status == 'troca'" class="btn btn-primary" type="button" value="Trocas" (click)="trocaAba('troca')"/>
     <input [disabled]="status == 'venda'"class="btn btn-primary" type="button" value="Vendas" (click)="trocaAba('venda')" />
-    <input class="btn btn-primary" type="submit" value="Novo interesse em troca"  routerLink="/trocas/criar/seljogos"/>
-        <input class="btn btn-primary" type="submit" value="Novo interesse em venda" routerLink="/vendas/criar/seljogo"/>
-
+    <app-modal></app-modal>
+    <app-modalvendas></app-modalvendas>
 
   </span>
   <div class="panel-current-negotiation">

@@ -7,6 +7,7 @@ import { FormData, SelJogo, DataVenda } from './formDataVenda';
 export class FormDataVendaService {
 
   private formData: FormData = new FormData();
+  private step: number = 1;
   private isSelJogoValid = false;
   private isDataVendaValid = false;
 
@@ -56,4 +57,7 @@ export class FormDataVendaService {
            this.isFormValid;
   }
 
+  changeStep(step: number) {
+    this.step = step;
+  }
 }

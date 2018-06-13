@@ -1,0 +1,16 @@
+<input class="btn btn-primary" type="button" value="Novo interesse em troca"  (click)="open(modaltroca)"/>
+
+<ng-template #modaltroca let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Adicionar troca</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" *ngIf="formDataTrocaService.step === 1">
+    <app-trocawizard-1step></app-trocawizard-1step>
+  </div>
+  <div class="modal-body" *ngIf="formDataTrocaService.step === 2">
+    <app-trocawizard-2step></app-trocawizard-2step>
+  </div>
+</ng-template>

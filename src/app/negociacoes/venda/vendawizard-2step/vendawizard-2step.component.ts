@@ -57,7 +57,7 @@ export class Vendawizard2stepComponent implements OnInit {
 
         console.log(this.vendas);
 
-        this.router.navigate(['/negociacoes']);
+        this.formDataVendaService.changeStep(1);
     }
   }
 }
