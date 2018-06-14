@@ -6,27 +6,40 @@
         <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
             <div class="row">
                 <h4>{{title}}</h4>
+
+                    <div *ngIf="seljogos.jogo_negociador" id="jogoMeuFoto">
+
+                            <img src="assets/{{ seljogos.jogo_negociador.photo }}" alt="JogoQuero" height="100%" width="100"></div>    
                 <div class='col-xs-12 col-sm-6'>
                     <div class="form-group">
                         <label for="jogo-negociador" class="control-label">Seu jogo</label>
                         <select class="form-control" [(ngModel)]="seljogos.jogo_negociador" #jogonegociador="ngModel" name="jogonegociador" id="jogo-negociador">
-                          <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
+                          <option *ngFor="let jogo of jogos" [ngValue]="jogo"  ngDefaultControl >{{jogo.nome}}</option>
                         </select>
-                       <!-- {{ seljogos.jogo_negociador.nome }} -->
                         <div class="alert alert-danger" [hidden]="jogonegociador.valid">{{ seljogos.jogo_negociador }}</div>
+        					
+
                     </div>
                 </div>
+
                 <div class='col-xs-12 col-sm-6'>
                     <div class="form-group">
                         <label class="control-label" >O jogo que você quer</label>
+
                         <select class="form-control" [(ngModel)]="seljogos.jogo_interessado" #jogointeressado="ngModel" name="jogointeressado" id="jogo-interessado">
                           <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
                         </select>
-                     <!--   {{ seljogos.jogo_interessado.nome }} -->
-                        <div class="alert alert-danger" [hidden]="jogointeressado.valid">{{ seljogos.jogo_interessado }}</div>
+
+                         <div class="alert alert-danger" [hidden]="jogointeressado.valid">{{ seljogos.jogo_interessado }}</div>
                     </div>
                 </div>
+
+                <div *ngIf="seljogos.jogo_interessado" id="jogoQueroFoto">
+
+                            <img src="assets/{{ seljogos.jogo_interessado.photo }}" alt="JogoQuero" height="100%" width="100"></div>
             </div>
+
+                     
 
             <div class="modal-footer">
                 <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!seljogos.jogo_interessado || !seljogos.jogo_negociador" (click)="goToNext(selJogos)"> Proximo passo: nivel de interesse  <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>

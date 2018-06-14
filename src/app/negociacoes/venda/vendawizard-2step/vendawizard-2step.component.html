@@ -6,7 +6,7 @@
             <div class="row">
                 <div class='col-xs-6'>
                     <div class="form-group">
-                        <label for="interesse" class="control-label"><h4>Interesse na venda</h4></label>
+                        <label for="interesse" class="control-label">Interesse na venda</label>
                         <div class="slidecontainer">
                             <input type="range" min="1" max="5" value="3" [(ngModel)]="datavenda.interesse" #interesse="ngModel" name="interesse" class="slider" id="interesse">
                               <ul class="range-labels">
@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group text-center">
-                <button class="btn btn-success btn-outline-rounded btn-info" [disabled]="!dataVenda.valid" (click)="enviarVenda(dataVenda)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class="btn btn-success btn-outline-rounded btn-info"  [disabled]="!dataVenda.valid" (click)="enviarVenda(dataVenda)"> Pronto! <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right" ></span></button>
             </div>
         </div>
     </div>

@@ -6,10 +6,18 @@
         <div class='col-xs-12'>
             <div class="row">
               <div class="form-group">
+                <div *ngIf="seljogo.jogo" id="jogoMeuFoto">
+
+                      <img src="assets/{{ seljogo.jogo.photo }}" alt="JogoQuero" height="100%" width="100"></div>
+
+
                   <label for="jogo-negociador" class="control-label">Seu jogo</label>
                   <select class="form-control" [(ngModel)]="seljogo.jogo" #jogo="ngModel" name="jogo" id="jogo">
                     <option *ngFor="let jogo of jogos" [ngValue]="jogo" ngDefaultControl >{{jogo.nome}}</option>
                   </select>
+                  
+
+
                   <div class="alert alert-danger" [hidden]="jogo.valid">{{ seljogo.jogo }}</div>
               </div>
             </div>

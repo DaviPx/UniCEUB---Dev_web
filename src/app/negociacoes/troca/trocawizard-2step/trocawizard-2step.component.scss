@@ -47,12 +47,27 @@
  
  ul{
    padding-left: inherit;
-   margin-right: 12%;
-   width: 100%;
-   margin-left: 6%;
+   margin-right: 13%;
+   width: 153%;
+   margin-left: 3%;
 }
 ul li{
     display: inline;
     margin-right: inherit;
 
+}
+
+#control-label{
+	display:block;
+	text-align:center;
+}
+
+.form-group{
+	width:250%;
+
+}
+
+.modal-footer{
+	display:block;
+	text-align:center;
 }

@@ -1,5 +1,5 @@
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 160%; /* Width of the outside container */
 }
 
 /* The slider itself */
@@ -45,14 +45,26 @@
 }
 
  ul{
- list-style: none;
- position: absolute;
- margin-left: -2%;
- margin-right: 40px;
+ 	list-style: none;
+	margin-left: 2%;
+	margin-right: 16%;
+	padding: 0;
+	width: 124%;
 
 }
 ul li{
     display: inline;
     margin-right: inherit;
+
+}
+
+.control-label{
+	display: block;
+	text-align:right;	
+	
+
+}
+.form-group{
+	width:100%;
 
 }
