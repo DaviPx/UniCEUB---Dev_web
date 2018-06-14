@@ -211,6 +211,33 @@ export class InMemoryDataService implements InMemoryDbService {
         preco_varejo: 150,
         preco_medio: 100
       },
+      {
+        id: 24,
+        nome: 'Rayman Origins',
+        votacao: 5,
+        photo: 'raymanVita.jpg',
+        plataforma: 'PS Vita',
+        preco_varejo: 120,
+        preco_medio: 80
+      },
+      {
+        id: 25,
+        nome: 'Ultimate Marvel VS Capcom 3',
+        votacao: 5,
+        photo: 'mvc.jpg',
+        plataforma: 'PS Vita',
+        preco_varejo: 170,
+        preco_medio: 150
+      },
+      {
+        id: 26,
+        nome: 'Gravity Rush',
+        votacao: 4,
+        photo: 'gravityrush.jpg',
+        plataforma: 'PS Vita',
+        preco_varejo: 140,
+        preco_medio: 110
+      },
     ];
 
     const trocas = [
